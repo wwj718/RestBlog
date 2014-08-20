@@ -1,0 +1,15 @@
+### Python
+*.pyc
+*.pyo
+djangoenv/
+
+###node
+bower_components/
+node_modules/
+
+### Editor and IDE artifacts
+*~
+
+###sqlite3
+*.db
+
