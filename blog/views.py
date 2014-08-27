@@ -1,3 +1,4 @@
+#coding:utf-8
 from django.contrib.auth.models import User
 from rest_framework import permissions
 from rest_framework import renderers
@@ -8,7 +9,11 @@ from blog.models import Blog
 from blog.permissions import IsOwnerOrReadOnly
 from blog.serializers import BlogSerializer, UserSerializer
 
+#包装了太多层了...设计是为了重用
+#初学还是从底层开始吧，易于定制
+#否则到处牵扯
 
+#起什么作业，做了些什么, 类比
 class BlogViewSet(viewsets.ModelViewSet):
     """
     BlogViewSet
