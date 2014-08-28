@@ -9,3 +9,6 @@
 *  sqlite
 *  django-restful-framework
 *  backbone.js
+
+###1
+backbone仅去获取数据，先不post
