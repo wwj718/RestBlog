@@ -4,3 +4,8 @@
 
 ##前端自动化
 使用node（不用grunt） 可以直接运行shell指令
+
+##第一轮
+*  sqlite
+*  django-restful-framework
+*  backbone.js
