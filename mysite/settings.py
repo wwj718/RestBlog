@@ -70,7 +70,8 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_ROOT, 'public/static/')
+    os.path.join(PROJECT_ROOT, 'static'),
+    #os.path.join(PROJECT_ROOT, "static")
 )
 
 # List of finder classes that know how to find static files in
@@ -157,13 +158,13 @@ LOGGING = {
     }
 }
 
-REST_FRAMEWORK = {
-    'PAGINATE_BY': 10,
-}
+# REST_FRAMEWORK = {
+#     'PAGINATE_BY': 10,
+# }
 
 # import os
 # if os.environ.get('HEROKU'):  # heroku config:set HEROKU=1
 #     import dj_database_url
 #     DATABASES['default'] = dj_database_url.config()
 
-LOGIN_REDIRECT_URL = '/'
+#LOGIN_REDIRECT_URL = '/'

@@ -3,10 +3,10 @@ from django.db import models
 
 class Blog(models.Model):
     title = models.CharField(max_length=100, blank=True, default='')
-    content = models.TextField()
-    owner = models.ForeignKey('auth.User', related_name='blog')
-    created = models.DateTimeField(auto_now_add=True)
-    publish = models.BooleanField(default=False)
+    content = models.TextField(blank=True)
+    owner = models.ForeignKey('auth.User',blank=True, null=True, related_name='blog')
+    created = models.DateTimeField(blank=True,null=True, auto_now_add=True)
+    publish = models.BooleanField(blank=True,default=False)
 
     class Meta:
         ordering = ('created',)

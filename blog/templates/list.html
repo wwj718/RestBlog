@@ -1,7 +1,25 @@
 {% extends "base.html" %}
 
+{% block extra_head %}
+<link type="text/css" rel="stylesheet" href="/static/css/blog_list.css" >
+<script src="http://cdn.bootcss.com/coffee-script/1.4.0/coffee-script.min.js"></script>
+{% endblock %}
+
 {% block title %}blog list{% endblock %}
 
 {% block content %}
-            list
+    <div id="container">
+            <div class="list">
+                <div class="contents">
+                </div>
+                <input type="text"></input>
+                <Button>+</button>
+            </div>
+    </div>
+
 {% endblock %} 
+
+{% block js %}
+<script type="text/coffeescript" src="/static/js/script.coffee"></script>
+<script type="text/coffeescript" src="/static/js/csrf.coffee"></script>
+{% endblock %}
