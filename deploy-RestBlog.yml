@@ -1,0 +1,17 @@
+# deploy-blog-simple.yml
+---
+- hosts: local  # hosts中指定
+#remote_user: wwj  # 如果和当前用户一样，则无需指定
+tasks:
+    - name: check out django_blog
+    git: dest=/tmp/RestBlog repo=https://github.com/wwj718/RestBlog.git
+        update=yes
+    - name: make virtualenv
+    shell: 'virtualenv /tmp/env'
+    - name: install requirements
+    pip: requirements=/tmp/RestBlog/requirements.txt
+        virtualenv=/tmp/env
+    #- name: init database
+    #shell: . ./bin/activate && cd /tmp/RestBlog && ./init_database.sh chdir=~/demos
+    #- name: run manage.py
+    #shell: . ./bin/activate && cd /tmp/RestBlog &&  ./run.sh chdir=~/demos
